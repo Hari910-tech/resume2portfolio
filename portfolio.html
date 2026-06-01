@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generated Portfolio</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+h1{
+color:#38bdf8;
+}
+
+h2{
+color:#38bdf8;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1 id="name"></h1>
+
+<h2 id="title"></h2>
+
+</div>
+
+<div class="card">
+
+<h2>About Me</h2>
+
+<p id="about"></p>
+
+</div>
+
+<div class="card">
+
+<h2>Skills</h2>
+
+<p id="skills"></p>
+
+</div>
+
+<div class="card">
+
+<h2>Projects</h2>
+
+<p id="projects"></p>
+
+</div>
+
+<div class="card">
+
+<h2>Links</h2>
+
+<p>
+LinkedIn:
+<a id="linkedin" target="_blank">
+View Profile
+</a>
+</p>
+
+<p>
+GitHub:
+<a id="github" target="_blank">
+View Profile
+</a>
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerText =
+localStorage.getItem("name");
+
+document.getElementById("title").innerText =
+localStorage.getItem("title");
+
+document.getElementById("about").innerText =
+localStorage.getItem("about");
+
+document.getElementById("skills").innerText =
+localStorage.getItem("skills");
+
+document.getElementById("projects").innerText =
+localStorage.getItem("projects");
+
+document.getElementById("linkedin").href =
+localStorage.getItem("linkedin");
+
+document.getElementById("github").href =
+localStorage.getItem("github");
+
+</script>
+
+</body>
+</html>
