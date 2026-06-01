@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Portfolio</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+color:#38bdf8;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:20px;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#38bdf8;
+border:none;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Create Your Portfolio</h1>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="text" id="title" placeholder="Professional Title">
+
+<textarea id="about" placeholder="About Me"></textarea>
+
+<textarea id="skills" placeholder="Skills"></textarea>
+
+<textarea id="projects" placeholder="Projects"></textarea>
+
+<input type="text" id="linkedin" placeholder="LinkedIn URL">
+
+<input type="text" id="github" placeholder="GitHub URL">
+
+<button onclick="generatePortfolio()">
+Generate Portfolio
+</button>
+
+</div>
+
+<script>
+
+function generatePortfolio(){
+
+localStorage.setItem("name",
+document.getElementById("name").value);
+
+localStorage.setItem("title",
+document.getElementById("title").value);
+
+localStorage.setItem("about",
+document.getElementById("about").value);
+
+localStorage.setItem("skills",
+document.getElementById("skills").value);
+
+localStorage.setItem("projects",
+document.getElementById("projects").value);
+
+localStorage.setItem("linkedin",
+document.getElementById("linkedin").value);
+
+localStorage.setItem("github",
+document.getElementById("github").value);
+
+window.location.href="portfolio.html";
+
+}
+
+</script>
+
+</body>
+</html>
